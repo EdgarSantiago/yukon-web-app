@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout title="Home">
       <Box
-        backgroundImage="url('/image.png')"
+        backgroundImage="url('https://cdn.discordapp.com/attachments/1039562578340347969/1039687626355130389/image.png')"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="100% 100%"

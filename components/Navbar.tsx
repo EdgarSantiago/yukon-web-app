@@ -60,7 +60,7 @@ export default function Navbar() {
         top={0}
         w="100%"
         zIndex={2}
-        py="20px"
+        py="25px"
         px={["0px", "10px", "20px", "100px"]}
       >
         <Flex

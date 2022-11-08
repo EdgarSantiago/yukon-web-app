@@ -5,6 +5,7 @@ import Fonts from "../components/Fonts";
 import Main from "../components/layouts/main";
 import theme from "../lib/theme";
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>

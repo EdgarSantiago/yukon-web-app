@@ -1,0 +1,145 @@
+import { ChevronDownIcon, SearchIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { motion } from "framer-motion";
+import {
+  Flex,
+  Box,
+  Button,
+  Spacer,
+  useColorModeValue,
+  Heading,
+  Image,
+  chakra,
+  HStack,
+  Show,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  Text,
+} from "@chakra-ui/react";
+
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import ThemeToggleButton from "./theme-toggle-button";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+
+export default function Navbar() {
+  const [bgColor, setBgColor] = useState("");
+  const [bgColor2, setBgColor2] = useState("");
+  const [color, setColor] = useState("#111010");
+  const [isShadow, setIsShadow] = useState("");
+
+  const listenScrollEvent = (event: any) => {
+    if (window.scrollY < 250) {
+      return (
+        setColor("#111111"),
+        setIsShadow(""),
+        setBgColor("transparent"),
+        setBgColor2("transparent")
+      );
+    } else if (window.scrollY > 250) {
+      return (
+        setColor("#1a1818"),
+        setIsShadow("md"),
+        setBgColor("linear(to-r, #faedbe , #f83636)"),
+        setBgColor2("linear(to-r, #111111, #111111)")
+      );
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
+  return (
+    <>
+      <Box
+        shadow={isShadow}
+        bgGradient={useColorModeValue(bgColor, bgColor2)}
+        position="fixed"
+        top={0}
+        w="100%"
+        zIndex={2}
+        py="20px"
+        px={["0px", "10px", "20px", "100px"]}
+      >
+        <Flex
+          minWidth="max-content"
+          px={[4, 4]}
+          py={1}
+          alignItems="center"
+          gap="2"
+        >
+          <Link href="/">
+            <Box className="click">
+              <Image
+                alt="logo"
+                src="https://media.discordapp.net/attachments/1039562578340347969/1039630178424475698/Untitled-2.png"
+                w="140px"
+                height="60px"
+              />
+            </Box>
+          </Link>
+          <Show above="1000px">
+            <Spacer />
+
+            <HStack spacing="20px">
+              <NavButton title="Home" />
+              <NavButton title="About" />
+              <NavButton title="Contact Us" />
+              <NavButton title="Services" />
+            </HStack>
+            {/*<ThemeToggleButton />*/}
+          </Show>
+
+          <Show below="1000px">
+            <Spacer />
+            {/*<ThemeToggleButton />*/}
+            <Box>
+              <Menu>
+                <MenuButton as={Button} px="10px">
+                  <HamburgerIcon w={4} h={4} />
+                </MenuButton>
+                <MenuList>
+                  <Link href="/">
+                    <MenuItem>Início</MenuItem>
+                  </Link>
+                  <MenuItem>Blog</MenuItem>
+                  <MenuItem>Sobre Min</MenuItem>
+                </MenuList>
+              </Menu>
+            </Box>
+          </Show>
+        </Flex>
+      </Box>
+    </>
+  );
+}
+
+interface NavButton {
+  link?: String;
+  title?: String;
+}
+
+function NavButton({ link, title }: NavButton) {
+  return (
+    <Link href={`${link}`}>
+      <Text
+        as={motion.p}
+        animate={{
+          textShadow: `0px 0px 0px transparent`,
+          borderBottom: "1px solid transparent",
+        }}
+        whileHover={{
+          textShadow: `0 0 5px #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 20px #00f4fc94, 0 0 20px #00f4fc94`,
+          scale: 1.1,
+          borderBottom: "1px solid #00F3FC",
+        }}
+        animation="0.2s linear"
+        fontWeight="bold"
+      >
+        {title}
+      </Text>
+    </Link>
+  );
+}

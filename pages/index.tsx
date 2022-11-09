@@ -6,23 +6,14 @@ import TriangleComponent from "../components/Triangle";
 
 export default function Home() {
   return (
-<<<<<<< Updated upstream
-    <Layout title="|">
       <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">
-        {/*<TriangleComponent />*/}
+        {/* <TriangleComponent /> */}
         <Box alignSelf="end" position="absolute" bottom="10%" px="10%">
-          <Heading fontSize="lg">
+          <Heading fontSize="lg" fontWeight={"thin"}>
             Id irure irure et reprehenderit esse ea laboris voluptate incididunt
             quis sint fugiat. Lorem adipisicing esse esse anim nostrud occaecat
             quis. Eu non non pariatur est veniam veniam dolore pariatur.
           </Heading>
         </Box>
-=======
-    <Layout title="Home">
-      <Box h="100vh" textAlign={"center"}>
-        <TriangleComponent />
->>>>>>> Stashed changes
       </Box>
-    </Layout>
-  );
-}
+)};

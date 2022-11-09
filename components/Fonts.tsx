@@ -5,7 +5,7 @@ const Fonts = () => (
     styles={`
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
-    /* logo gont */
+    /* logo font */
       @font-face {
         font-family: spaceage;
         font-style: normal;

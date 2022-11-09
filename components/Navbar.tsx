@@ -78,11 +78,11 @@ export default function Navbar() {
           <Show above="1000px">
             <Spacer />
 
-            <HStack spacing="40px">
+            <HStack spacing="50px">
               <NavButton title="Home" />
               <NavButton title="About" />
-              <NavButton title="Contact Us" />
               <NavButton title="Services" />
+              <NavButton title="Contact" />
             </HStack>
             {/*<ThemeToggleButton />*/}
           </Show>
@@ -140,7 +140,7 @@ function NavButton({ link, title }: NavButton) {
           ease: "easeInOut",
         }}
       >
-        <Text fontWeight="bold">{title}</Text>
+        <Text fontWeight="thin">{title}</Text>
       </StyledBox>
     </Link>
   );

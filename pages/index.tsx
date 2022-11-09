@@ -10,7 +10,8 @@ export default function Home() {
         <TriangleComponent />
             <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
               <Heading fontSize="lg" fontWeight={"thin"}>
-                We're at the core.
+                We're at the core. <br></br>
+                ユーコン。
               </Heading>
             </Box>
       </Box>

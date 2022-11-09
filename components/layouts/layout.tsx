@@ -13,7 +13,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, title }: LayoutProps) => {
-  const t = `Yukon cybernetics ${title}`;
+  const t = `Yukon Cybernetics ${title}`;
   return (
     <motion.article
       initial="hidden"

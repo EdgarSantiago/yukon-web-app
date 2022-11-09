@@ -203,8 +203,8 @@ export default function MinimapComponent() {
         <Effects>
           <Suspense fallback={null}>
             <HeadsUpDisplay>
-              <Map />
               <Marker />
+              <Map />
               <Content />
             </HeadsUpDisplay>
           </Suspense>

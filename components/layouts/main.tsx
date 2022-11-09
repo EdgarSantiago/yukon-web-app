@@ -24,7 +24,6 @@ const Main = ({ children }: LayoutProps) => {
       <Container py="0px" px="0px" maxW="100%" h="100%">
         <Navbar />
         {children}
-        <Footer />
       </Container>
     </Box>
   );

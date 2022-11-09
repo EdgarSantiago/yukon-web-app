@@ -5,6 +5,9 @@ import Layout from "../components/layouts/layout";
 import { StyledBox } from "../components/theme-toggle-button";
 import Minimap from "../components/Minimap";
 
+import useSound from "use-sound";
+declare module "*.mp3";
+
 export default function Home() {
   const [play] = useSound("/sound/yukon.mp3");
   play();

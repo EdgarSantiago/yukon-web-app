@@ -72,7 +72,7 @@ export default function Navbar() {
         >
           <Link href="/">
             <Box>
-              <Heading fontFamily={"spaceage"}>YUKON</Heading>
+              <Heading fontFamily={"spaceage"} fontSize={"xxx-large"} >YUKON</Heading>
             </Box>
           </Link>
           <Show above="1000px">

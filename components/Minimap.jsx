@@ -202,17 +202,17 @@ export default function MinimapComponent() {
       >
         <Effects>
           <Suspense fallback={null}>
-            <Content />
             <HeadsUpDisplay>
               <Map />
               <Marker />
+              <Content />
             </HeadsUpDisplay>
           </Suspense>
         </Effects>
       </Canvas>
-      <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+      <Box className="scrollArea" ref={scrollArea} onScroll={onScroll}>
         <Box style={{ height: "100vh", width: `${state.pages * 100}vw` }} />
-      </div>
+      </Box>
       <Loader />
     </>
   );

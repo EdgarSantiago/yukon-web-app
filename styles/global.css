@@ -40,11 +40,6 @@ loading bar*/
   100% { width: 100%; }
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
@@ -56,7 +51,6 @@ body {
 
 
 .scrollArea {
-  z-index: 999;
   position: absolute;
   top: 0;
   left: 0;

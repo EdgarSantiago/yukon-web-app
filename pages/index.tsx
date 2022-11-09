@@ -6,6 +6,7 @@ import TriangleComponent from "../components/Triangle";
 
 export default function Home() {
   return (
+<<<<<<< Updated upstream
     <Layout title="|">
       <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">
         {/*<TriangleComponent />*/}
@@ -16,6 +17,11 @@ export default function Home() {
             quis. Eu non non pariatur est veniam veniam dolore pariatur.
           </Heading>
         </Box>
+=======
+    <Layout title="Home">
+      <Box h="100vh" textAlign={"center"}>
+        <TriangleComponent />
+>>>>>>> Stashed changes
       </Box>
     </Layout>
   );

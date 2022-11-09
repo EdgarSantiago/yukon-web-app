@@ -164,8 +164,8 @@ function Image({ img, index }) {
 
 function Content() {
   const images = useTexture([
-    "/01.jpg",
     "/ph1.jpg",
+    "/01.jpg",
     "/00.jpg",
     "/03.jpg",
     "/04.jpg",

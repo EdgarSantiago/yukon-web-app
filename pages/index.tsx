@@ -5,7 +5,6 @@ import Layout from "../components/layouts/layout";
 import TriangleComponent from "../components/Triangle";
 import { StyledBox } from "../components/theme-toggle-button";
 import Minimap from "../components/Minimap";
-
 export default function Home() {
   return (
     <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">

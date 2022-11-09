@@ -135,7 +135,7 @@ function NavButton({ link, title }: NavButton) {
           borderBottom: "1px solid #00F3FC",
         }}
         transition={{
-          duration: "0.10",
+          duration: "0.50",
           type: "Spring",
         }}
       >

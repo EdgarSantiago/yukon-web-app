@@ -1,5 +1,5 @@
 import { Box, Fade, Heading } from "@chakra-ui/react";
-import Head from "next/head";
+import Head from "next/head"; 
 import Image from "next/image";
 import Layout from "../components/layouts/layout";  
 import { StyledBox } from "../components/theme-toggle-button";

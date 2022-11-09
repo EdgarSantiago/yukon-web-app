@@ -137,7 +137,7 @@ function Image({ img, index }) {
     ref.current.scale.setScalar(scale);
   });
   return (
-    <group ref={ref}>
+    <group ref={ref} style={{ position: "relative" }}>
       <Plane
         map={img}
         args={[1, 1, 32, 32]}
@@ -147,13 +147,18 @@ function Image({ img, index }) {
         frustumCulled={false}
       />
       <Text
-        anchorX="left"
-        position={[-w / 2, -w / 1.5 / 2 - 0.25, 0]}
+        anchorX="right"
+        anchorY="bottom"
         scale={1.5}
         color="white"
+        fontSize={0.15}
+        maxWidth={4}
       >
-        0{index}
+        Occaecat elit proident cillum eiusmod eu eu ad adipisicing culpa. Est
+        aute ea ut cillum nulla ad id velit magna. Consectetur est mollit esse
+        non occaecat.
       </Text>
+
       <Shadow
         scale={[w * 1.2, 1, 1]}
         rotation={[0.75, 0, 0]}
@@ -204,9 +209,9 @@ export default function MinimapComponent() {
         <Effects>
           <Suspense fallback={null}>
             <HeadsUpDisplay>
-              <Marker />
               <Map />
               <Content />
+              {/**  <Marker />*/}
             </HeadsUpDisplay>
           </Suspense>
         </Effects>

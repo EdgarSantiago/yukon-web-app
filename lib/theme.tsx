@@ -4,7 +4,7 @@ import { mode } from "@chakra-ui/theme-tools";
 const styles = {
   global: (props: any) => ({
     body: {
-      bg: mode("#f0e7db", "#111111")(props),
+      bg: mode("#0000000", "#000000")(props),
     },
   }),
 };
@@ -32,8 +32,8 @@ const components = {
 };
 
 const fonts = {
-  heading: "'Lato', sans-serif",
-  body: "'Lato', sans-serif",
+  heading: "spaceage",
+  body: "spaceage",
 };
 
 const colors = {
@@ -42,7 +42,7 @@ const colors = {
 
 const config = {
   initialColorMode: "dark",
-  useSystemColorMode: true,
+  useSystemColorMode: false,
 };
 
 const theme = extendTheme({ config, styles, components, fonts, colors });

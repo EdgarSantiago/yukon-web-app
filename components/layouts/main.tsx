@@ -21,13 +21,7 @@ const Main = ({ children }: LayoutProps) => {
   return (
     <Box as="main" position="relative">
       <Loading isVisible={isLoaded} />
-      <Container
-        py="0px"
-        px="0px"
-        maxW="100%"
-        h="100%"
-        bg={useColorModeValue("#fafafa", "#111111")}
-      >
+      <Container py="0px" px="0px" maxW="100%" h="100%">
         <Navbar />
         {children}
         <Footer />

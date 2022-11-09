@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Layout title="Home">
       <Box h="100vh" textAlign={"center"}>
-        <TriangleComponent />
+        {/*<TriangleComponent />*/}
       </Box>
     </Layout>
   );

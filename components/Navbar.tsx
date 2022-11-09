@@ -121,21 +121,27 @@ interface NavButton {
   title?: String;
 }
 
+import useSound from "use-sound";
+declare module "*.mp3";
+
 function NavButton({ link, title }: NavButton) {
+  const [play, { stop }] = useSound("/sound/bleep.mp3");
   return (
     <Link href={`${link}`}>
       <StyledBox
+        onHoverStart={() => play()}
+        onHoverEnd={() => stop()}
         animate={{
           textShadow: `0px 0px 0px transparent`,
           borderBottom: "1px solid transparent",
         }}
         whileHover={{
-          textShadow: `0 0 5px #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
+          textShadow: `0 0 0 #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
           scale: 1.05,
           borderBottom: "1px solid #00F3FC",
         }}
         transition={{
-          duration: "0.50",
+          duration: "1",
           type: "Spring",
         }}
       >

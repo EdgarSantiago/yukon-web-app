@@ -17,6 +17,7 @@ import Effects from "../components/3D/Effects";
 import { Block, useBlock } from "../components/3D/blocks";
 import state from "../components/3D/store";
 import { Box } from "@chakra-ui/react";
+import useSound from "use-sound";
 
 function HeadsUpDisplay({ children }) {
   const [scene] = useState(() => new THREE.Scene());
@@ -165,11 +166,11 @@ function Image({ img, index }) {
 function Content() {
   const images = useTexture([
     "/333.jpg",
-    "/ph1.jpg",
+    "/444.jpg",
     "/01.jpg",
-    "/03.jpg",
-    "/04.jpg",
-    "/05.jpg",
+    "/555.jpg",
+    "/666.jpg",
+    "/888.jpg",
   ]);
   return images.map((img, index) => (
     <Block key={index} factor={1} offset={index}>

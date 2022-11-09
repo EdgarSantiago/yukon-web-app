@@ -209,9 +209,9 @@ export default function MinimapComponent() {
         <Effects>
           <Suspense fallback={null}>
             <HeadsUpDisplay>
-              <Map />
+              <Marker />
               <Content />
-              {/**  <Marker />*/}
+              <Map />
             </HeadsUpDisplay>
           </Suspense>
         </Effects>

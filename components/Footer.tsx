@@ -85,17 +85,17 @@ export default function Footer() {
         >
           <Stack spacing={6}>
             <Text fontSize={"sm"} fontWeight="extrabold">
-              © 2022 Chakra Templates. All rights reserved
+              © 2023 Yukon Cybernetics. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter fill="cyan"/>
+                <FaTwitter />
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
-                <FaYoutube fill="cyan"/>
+                <FaYoutube />
               </SocialButton>
               <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram fill="cyan"/>
+                <FaInstagram />
               </SocialButton>
             </Stack>
           </Stack>

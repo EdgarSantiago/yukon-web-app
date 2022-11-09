@@ -89,13 +89,13 @@ export default function Footer() {
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter />
+                <FaTwitter fill="cyan"/>
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
-                <FaYoutube />
+                <FaYoutube fill="cyan"/>
               </SocialButton>
               <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram />
+                <FaInstagram fill="cyan"/>
               </SocialButton>
             </Stack>
           </Stack>

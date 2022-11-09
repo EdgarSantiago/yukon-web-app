@@ -97,9 +97,9 @@ export default function Navbar() {
             {/*<ThemeToggleButton />*/}
             <Box>
               <Menu>
-                <MenuButton as={Button} px="10px">
+                {/* <MenuButton as={Button} px="10px">
                   <HamburgerIcon w={4} h={4} />
-                </MenuButton>
+                </MenuButton> */}
                 <MenuList>
                   <Link href="/">
                     <MenuItem>Início</MenuItem>

@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import ThemeToggleButton from "./theme-toggle-button";
+import ThemeToggleButton, { StyledBox } from "./theme-toggle-button";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
@@ -71,7 +71,7 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
-            <Box className="click">
+            <Box>
               <Image
                 alt="logo"
                 src="https://media.discordapp.net/attachments/1039562578340347969/1039630178424475698/Untitled-2.png"
@@ -83,7 +83,7 @@ export default function Navbar() {
           <Show above="1000px">
             <Spacer />
 
-            <HStack spacing="20px">
+            <HStack spacing="40px">
               <NavButton title="Home" />
               <NavButton title="About" />
               <NavButton title="Contact Us" />
@@ -124,22 +124,23 @@ interface NavButton {
 function NavButton({ link, title }: NavButton) {
   return (
     <Link href={`${link}`}>
-      <Text
-        as={motion.p}
+      <StyledBox
         animate={{
           textShadow: `0px 0px 0px transparent`,
           borderBottom: "1px solid transparent",
         }}
         whileHover={{
-          textShadow: `0 0 5px #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 20px #00f4fc94, 0 0 20px #00f4fc94`,
-          scale: 1.1,
+          textShadow: `0 0 5px #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
+          scale: 1.05,
           borderBottom: "1px solid #00F3FC",
         }}
-        animation="0.2s linear"
-        fontWeight="bold"
+        transition={{
+          duration: "0.10",
+          type: "Spring",
+        }}
       >
-        {title}
-      </Text>
+        <Text fontWeight="bold">{title}</Text>
+      </StyledBox>
     </Link>
   );
 }

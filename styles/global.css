@@ -66,13 +66,13 @@ body {
 
 .scrollArea::-webkit-scrollbar {
   width: 8px;
-  height: 100vh;
+  height: 8px;
   margin-bottom: 20%
 }
 .scrollArea::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #fafafa;
   border-radius: 5px;
 }
 .scrollArea::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+  background: #fafafa;
 }

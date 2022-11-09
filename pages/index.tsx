@@ -17,6 +17,7 @@ export default function Home() {
       display={"flex"}
       textAlign={"center"}
       position="relative"
+      overflowX="hidden"
     >
       <div id="mini">
         <Minimap />

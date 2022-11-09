@@ -72,12 +72,7 @@ export default function Navbar() {
         >
           <Link href="/">
             <Box>
-              <Image
-                alt="logo"
-                src="https://media.discordapp.net/attachments/1039562578340347969/1039630178424475698/Untitled-2.png"
-                w="140px"
-                height="60px"
-              />
+              <Heading fontFamily={"spaceage"}>YUKON</Heading>
             </Box>
           </Link>
           <Show above="1000px">
@@ -133,7 +128,7 @@ function NavButton({ link, title }: NavButton) {
         onHoverEnd={() => stop()}
         animate={{
           textShadow: `0px 0px 0px transparent`,
-          borderBottom: "1px solid transparent",
+          borderBottom: ["0px solid transparent", "1px solid transparent"],
         }}
         whileHover={{
           textShadow: `0 0 0 #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
@@ -141,8 +136,8 @@ function NavButton({ link, title }: NavButton) {
           borderBottom: "1px solid #00F3FC",
         }}
         transition={{
-          duration: "1",
-          type: "Spring",
+          duration: "0.2",
+          ease: "easeInOut",
         }}
       >
         <Text fontWeight="bold">{title}</Text>

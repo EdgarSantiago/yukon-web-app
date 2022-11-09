@@ -32,8 +32,8 @@ const components = {
 };
 
 const fonts = {
-  heading: "spaceage",
-  body: "spaceage",
+  heading: "Lato', sans-serif",
+  body: "Lato', sans-serif",
 };
 
 const colors = {

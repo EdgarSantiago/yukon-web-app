@@ -47,7 +47,7 @@ const SocialButton = ({
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
+      rounded={"2xl"}
       w={8}
       h={8}
       cursor={"pointer"}

@@ -5,7 +5,13 @@ import Layout from "../components/layouts/layout";
 import TriangleComponent from "../components/Triangle";
 import { StyledBox } from "../components/theme-toggle-button";
 import Minimap from "../components/Minimap";
+
+import useSound from "use-sound";
+import { useEffect } from "react";
+declare module "*.mp3";
 export default function Home() {
+  const [play] = useSound("/sound/yukon.mp3");
+  play();
   return (
     <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">
       {/* <TriangleComponent /> */}

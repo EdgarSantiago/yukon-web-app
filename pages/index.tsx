@@ -4,20 +4,25 @@ import Image from "next/image";
 import Layout from "../components/layouts/layout";
 import TriangleComponent from "../components/Triangle";
 import { StyledBox } from "../components/theme-toggle-button";
-import Minimap from '../components/Minimap'
+import Minimap from "../components/Minimap";
 
 export default function Home() {
   return (
-      <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">
-        {/* <TriangleComponent /> */}
-        <Minimap />
-            <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
-              <StyledBox initial={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ type: "Spring", duration:"8" }} >
-                <Heading fontSize="lg" fontWeight={"thin"}>
-                  We're at the core. <br></br>
-                  ユーコン。
-                </Heading>
-              </StyledBox>
-            </Box>
+    <Box h="100vh" display={"flex"} textAlign={"center"} position="relative">
+      {/* <TriangleComponent /> */}
+      <Minimap />
+      <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
+        <StyledBox
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "Spring", duration: "8" }}
+        >
+          <Heading fontSize="lg" fontWeight={"thin"}>
+            We're at the core. <br></br>
+            ユーコン。
+          </Heading>
+        </StyledBox>
       </Box>
-)};
+    </Box>
+  );
+}

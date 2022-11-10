@@ -7,10 +7,6 @@ declare module "*.mp3";
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
   const [play, { stop }] = useSound("/sound/enterbtn.mp3");
   const [Hidden, setHidden] = useState(isVisible);
-  const hide = () => {
-    setHidden(true);
-    play();
-  };
   return (
     <AnimatePresence initial={false}>
       {!Hidden && (
@@ -42,7 +38,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
               }}
               transition={{
                 duration: "1",
-                ease: "ease-out",
+                ease: "easeOut",
               }}
               onHoverStart={() => play()}
               onHoverEnd={() => stop()}
@@ -56,8 +52,9 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
                 Y
               </Heading>
             </StyledBox>
-            <StyledBox mt="95%">
-              <Heading fontSize="lg" mb="50px" fontWeight={"hairline"}>
+
+            <StyledBox mt="50%">
+              <Heading fontSize="lg" mb="50px" fontWeight={"thin"}>
                 This website uses audio to enhance your experience.
               </Heading>
               <Heading fontSize="sm" fontWeight={"thin"}>

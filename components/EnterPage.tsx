@@ -43,7 +43,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
               }}
               transition={{
                 duration: "1",
-                ease: "easeInOut",
+                ease: "ease-out",
               }}
             >
               <Heading

@@ -19,15 +19,19 @@ export default function Home() {
       position="relative"
       overflowX="hidden"
     >
+      <StyledBox initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "Spring", duration: "8" }}
+        >
       <div id="mini">
-        <Minimap />
+          <Minimap />
       </div>
-
+      </StyledBox>
       <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
         <StyledBox
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "Spring", duration: "8" }}
+          transition={{ type: "Spring", duration: "3" }}
         >
           <Heading fontSize="lg" fontWeight={"thin"}>
             We're at the core. <br></br>

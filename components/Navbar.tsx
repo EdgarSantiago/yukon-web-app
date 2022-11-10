@@ -71,9 +71,25 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
-            <Box>
-              <Heading fontFamily={"spaceage"} fontSize={"xx-large"} >YUKON</Heading>
-            </Box>
+            <StyledBox
+              className="hvr-underline-from-center"
+              onHoverStart={() => play()}
+              onHoverEnd={() => stop()}
+              animate={{
+                textShadow: `0px 0px 0px transparent`,
+              }}
+              whileHover={{
+                textShadow: `0 0 0 #fafafa86, 0 0 2px #fafafa86, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94`,
+              }}
+              transition={{
+                duration: "0.2",
+                ease: "easeInOut",
+              }}
+            >
+              <Heading fontFamily={"spaceage"} fontSize={"xx-large"}>
+                YUKON
+              </Heading>
+            </StyledBox>
           </Link>
           <Show above="1000px">
             <Spacer />
@@ -124,19 +140,17 @@ function NavButton({ link, title }: NavButton) {
   return (
     <Link href={`${link}`}>
       <StyledBox
+        className="hvr-underline-from-center"
         onHoverStart={() => play()}
         onHoverEnd={() => stop()}
         animate={{
           textShadow: `0px 0px 0px transparent`,
-          borderBottom: ["0px solid transparent", "1px solid transparent"],
         }}
         whileHover={{
-          textShadow: `0 0 0 #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
-          scale: 1.05,
-          borderBottom: "1px solid #00F3FC",
+          textShadow: `0 0 0 #fafafa86, 0 0 2px #fafafa86, 0 0 2px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94`,
         }}
         transition={{
-          duration: "0.2",
+          duration: "0.8",
           ease: "easeInOut",
         }}
       >

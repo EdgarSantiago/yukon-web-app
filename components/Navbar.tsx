@@ -27,7 +27,7 @@ export default function Navbar() {
   const [bgColor2, setBgColor2] = useState("");
   const [color, setColor] = useState("#111010");
   const [isShadow, setIsShadow] = useState("");
-
+  const [play, { stop }] = useSound("/sound/bleep.mp3");
   const listenScrollEvent = (event: any) => {
     if (window.scrollY < 250) {
       return (
@@ -60,8 +60,8 @@ export default function Navbar() {
         top={0}
         w="100%"
         zIndex={2}
-        py="25px"
-        px={["0px", "10px", "20px", "100px"]}
+        py={["10px", "25px"]}
+        px={["10px", "10px", "20px", "100px"]}
       >
         <Flex
           minWidth="max-content"
@@ -71,9 +71,30 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
-            <Box>
-              <Heading fontFamily={"spaceage"} fontSize={"xxx-large"} >YUKON</Heading>
-            </Box>
+            <StyledBox
+              onHoverStart={() => play()}
+              onHoverEnd={() => stop()}
+              animate={{
+                textShadow: `0px 0px 0px transparent`,
+                borderBottom: [
+                  "0px solid transparent",
+                  "1px solid transparent",
+                ],
+              }}
+              whileHover={{
+                textShadow: `0 0 0 #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
+                scale: 1.05,
+                borderBottom: "1px solid #00F3FC",
+              }}
+              transition={{
+                duration: "0.2",
+                ease: "easeInOut",
+              }}
+            >
+              <Heading fontFamily={"spaceage"} fontSize={"xx-large"}>
+                YUKON
+              </Heading>
+            </StyledBox>
           </Link>
           <Show above="1000px">
             <Spacer />

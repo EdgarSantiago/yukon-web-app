@@ -5,6 +5,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Loading from "../Loading";
 import { useEffect, useState } from "react";
+import EnterPage from "../EnterPage";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ const Main = ({ children }: LayoutProps) => {
   }, []);
   return (
     <Box as="main" position="relative">
-      {/* <Loading isVisible={isLoaded} /> */}
+      <Loading isVisible={isLoaded} />
       <Container py="0px" px="0px" maxW="100%" h="100%">
         <Navbar />
         {children}

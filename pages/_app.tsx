@@ -5,6 +5,7 @@ import Fonts from "../components/Fonts";
 import Main from "../components/layouts/main";
 import theme from "../lib/theme";
 import "../styles/global.css";
+import "../styles/global.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

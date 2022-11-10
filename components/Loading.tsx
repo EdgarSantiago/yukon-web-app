@@ -11,7 +11,7 @@ export default function Loading({ isVisible }: { isVisible: Boolean }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: "0.4", type: "easeInOut" }}
-          height="110vh"
+          height="100vh"
           width="100%"
           bg="#000000"
           position="absolute"

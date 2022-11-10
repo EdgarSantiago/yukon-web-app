@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layout from "../components/layouts/layout";
 import { StyledBox } from "../components/theme-toggle-button";
 import Minimap from "../components/Minimap";
+import EnterPage from "../components/EnterPage";
 import useSound from "use-sound";
 declare module "*.mp3";
 
@@ -19,13 +20,13 @@ export default function Home() {
       position="relative"
       overflowX="hidden"
     >
-      <StyledBox initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ type: "Spring", duration: "8" }}
-        >
-      <div id="mini">
-          <Minimap />
-      </div>
+      <EnterPage isVisible={false} />
+      <StyledBox
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ type: "Spring", duration: "8" }}
+      >
+        <div id="mini">{/** <Minimap /> */}</div>
       </StyledBox>
       <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
         <StyledBox

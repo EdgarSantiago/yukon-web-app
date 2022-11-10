@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-red: #fafafa;
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+}
+
+.pixelBtn {
+    border-radius: 100%;
+  position: relative;
+  padding: 10px 10px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  transition: var(--speed-normal);
+  &:hover {
+    background: var(--color-red) url(/pixel.png); // 360px x 1080px
+    transition-delay: 0.4s;
+    background-size: 180px;
+    animation: animate var(--speed-fast) steps(8) forwards;
+    cursor: pointer;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+    color: #fafafa;
+  }
+  100% {
+    color: #111111;
+    background-position-y: -480px;
+  }
+}

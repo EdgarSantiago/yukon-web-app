@@ -1,21 +1,17 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { StyledBox } from "./theme-toggle-button";
 import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
-
 import useSound from "use-sound";
 import { useState } from "react";
 declare module "*.mp3";
-
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
   const [play] = useSound("/sound/enterbtn.mp3");
   play();
   const [Hidden, setHidden] = useState(isVisible);
-
   const hide = () => {
     setHidden(true);
     play();
   };
-
   return (
     <AnimatePresence initial={false}>
       {!Hidden && (
@@ -37,7 +33,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
           <Box m="auto" textAlign={"center"}>
             <StyledBox
               className="hvr-underline-from-center"
-              mt="100%"
+              mt="50%"
               animate={{
                 textShadow: `0px 0px 0px transparent`,
               }}
@@ -59,9 +55,15 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
                 Y
               </Heading>
             </StyledBox>
-            <Heading mt="100%" fontSize="sm" fontWeight={"thin"}>
-              {new Date().getFullYear()} Yukon Cybernetics. All rights reserved.
-            </Heading>
+            <StyledBox mt="95%">
+              <Heading fontSize="lg" mb="50px" fontWeight={"hairline"}>
+                This website uses audio to enhance your experience.
+              </Heading>
+              <Heading fontSize="sm" fontWeight={"thin"}>
+                {new Date().getFullYear()} Yukon Cybernetics. All rights
+                reserved.
+              </Heading>
+            </StyledBox>
           </Box>
         </StyledBox>
       )}

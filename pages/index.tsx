@@ -31,7 +31,7 @@ export default function Home() {
         <StyledBox
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "Spring", duration: "3" }}
+          transition={{ type: "Spring", duration: "2" }}
         >
           <Heading fontSize="lg" fontWeight={"thin"}>
             We're at the core. <br></br>

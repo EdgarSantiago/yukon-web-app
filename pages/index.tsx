@@ -26,7 +26,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ type: "Spring", duration: "8" }}
       >
-        <div id="mini">{/** <Minimap /> */}</div>
+        <div id="mini">* <Minimap /></div>
       </StyledBox>
       <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
         <StyledBox

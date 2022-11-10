@@ -1,15 +1,20 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { StyledBox } from "./theme-toggle-button";
 import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
-
 import useSound from "use-sound";
 import { useState } from "react";
 declare module "*.mp3";
-
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
   const [play, { stop }] = useSound("/sound/enterbtn.mp3");
   const [Hidden, setHidden] = useState(isVisible);
+<<<<<<< HEAD
 
+=======
+  const hide = () => {
+    setHidden(true);
+    play();
+  };
+>>>>>>> f3501cd331273739f6f32631b32aa5ff4359265b
   return (
     <AnimatePresence initial={false}>
       {!Hidden && (
@@ -41,7 +46,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
               }}
               transition={{
                 duration: "1",
-                ease: "easeInOut",
+                ease: "ease-out",
               }}
               onHoverStart={() => play()}
               onHoverEnd={() => stop()}
@@ -55,9 +60,14 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
                 Y
               </Heading>
             </StyledBox>
+<<<<<<< HEAD
 
             <StyledBox mt="50%">
               <Heading fontSize="lg" mb="50px" fontWeight={"thin"}>
+=======
+            <StyledBox mt="95%">
+              <Heading fontSize="lg" mb="50px" fontWeight={"hairline"}>
+>>>>>>> f3501cd331273739f6f32631b32aa5ff4359265b
                 This website uses audio to enhance your experience.
               </Heading>
               <Heading fontSize="sm" fontWeight={"thin"}>

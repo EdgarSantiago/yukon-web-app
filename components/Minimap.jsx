@@ -147,6 +147,7 @@ function Image({ img, index }) {
         frustumCulled={false}
       />
       <Text
+        
         anchorX="right"
         anchorY="bottom"
         scale={1.5}
@@ -156,7 +157,6 @@ function Image({ img, index }) {
       >
         There is a single light of science, and to brighten it anywhere is to brighten it everywhere.
       </Text>
-      
 
       <Shadow
         scale={[w * 1.2, 1, 1]}

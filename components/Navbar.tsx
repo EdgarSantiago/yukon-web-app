@@ -71,30 +71,9 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
-            <StyledBox
-              onHoverStart={() => play()}
-              onHoverEnd={() => stop()}
-              animate={{
-                textShadow: `0px 0px 0px transparent`,
-                borderBottom: [
-                  "0px solid transparent",
-                  "1px solid transparent",
-                ],
-              }}
-              whileHover={{
-                textShadow: `0 0 0 #fafafa86, 0 0 5px #fafafa86, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94, 0 0 5px #00f4fc94`,
-                scale: 1.05,
-                borderBottom: "1px solid #00F3FC",
-              }}
-              transition={{
-                duration: "0.2",
-                ease: "easeInOut",
-              }}
-            >
-              <Heading fontFamily={"spaceage"} fontSize={"xx-large"}>
-                YUKON
-              </Heading>
-            </StyledBox>
+            <Box>
+              <Heading fontFamily={"spaceage"} fontSize={"xx-large"} >YUKON</Heading>
+            </Box>
           </Link>
           <Show above="1000px">
             <Spacer />

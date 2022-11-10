@@ -7,14 +7,8 @@ import { useState } from "react";
 declare module "*.mp3";
 
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
-  const [play] = useSound("/sound/enterbtn.mp3");
-  play();
+  const [play, { stop }] = useSound("/sound/enterbtn.mp3");
   const [Hidden, setHidden] = useState(isVisible);
-
-  const hide = () => {
-    setHidden(true);
-    play();
-  };
 
   return (
     <AnimatePresence initial={false}>
@@ -49,12 +43,14 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
                 duration: "1",
                 ease: "easeInOut",
               }}
+              onHoverStart={() => play()}
+              onHoverEnd={() => stop()}
             >
               <Heading
                 transition="0.2s linear"
                 fontSize="72px"
                 fontFamily="spaceage"
-                onClick={() => hide()}
+                onClick={() => setHidden(true)}
               >
                 Y
               </Heading>

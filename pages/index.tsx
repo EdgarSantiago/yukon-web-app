@@ -9,7 +9,7 @@ import useSound from "use-sound";
 declare module "*.mp3";
 
 export default function Home() {
-  const [play] = useSound("/ound/yukon.mp3");
+  const [play] = useSound("/sound/yukon.mp3");
   play();
   return (
     <Box

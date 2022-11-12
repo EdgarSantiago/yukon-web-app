@@ -14,7 +14,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: "0.4", type: "easeInOut" }}
+          transition={{ duration: "0.9", type: "easeInOut" }}
           height="100vh"
           width="100%"
           bg="#000000"

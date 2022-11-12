@@ -147,7 +147,6 @@ function Image({ img, index }) {
         frustumCulled={false}
       />
       <Text
-        
         anchorX="right"
         anchorY="bottom"
         scale={1.5}
@@ -155,7 +154,8 @@ function Image({ img, index }) {
         fontSize={0.15}
         maxWidth={4}
       >
-        There is a single light of science, and to brighten it anywhere is to brighten it everywhere.
+        There is a single light of science, and to brighten it anywhere is to
+        brighten it everywhere.
       </Text>
 
       <Shadow
@@ -208,8 +208,8 @@ export default function MinimapComponent() {
         <Effects>
           <Suspense fallback={null}>
             <HeadsUpDisplay>
-              <Content />
               <Map />
+              <Content />
               <Marker />
             </HeadsUpDisplay>
           </Suspense>

@@ -6,42 +6,42 @@ import { StyledBox } from "../components/theme-toggle-button";
 import Minimap from "../components/Minimap";
 import EnterPage from "../components/EnterPage";
 import useSound from "use-sound";
+import { NextPage } from "next";
 declare module "*.mp3";
 
 export default function Home() {
-  const [play] = useSound("/ound/yukon.mp3");
-  play();
+  const [play] = useSound("/sound/yukon.mp3");
   return (
-    <Box
-      h="100vh"
-      w="100%"
-      display={"flex"}
-      textAlign={"center"}
-      position="relative"
-      overflowX="hidden"
-    >
-      <EnterPage isVisible={false} />
-      <StyledBox
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ type: "Spring", duration: "8" }}
+    <Layout title="| Home">
+      <Box
+        h="100vh"
+        w="100%"
+        display={"flex"}
+        textAlign={"center"}
+        position="relative"
+        overflowX="hidden"
       >
-        * <div id="mini">
-          <Minimap />
-        </div> 
-      </StyledBox>
-      <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
+        {/*<EnterPage isVisible={false} />*/}
         <StyledBox
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "Spring", duration: "2" }}
+          transition={{ type: "Spring", duration: "8" }}
         >
-          <Heading fontSize="lg" fontWeight={"thin"}>
-            We're at the core. <br></br>
-            ユーコン。
-          </Heading>
+          <div id="mini">{/*<Minimap /> */}</div>
         </StyledBox>
+        <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
+          <StyledBox
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ type: "Spring", duration: "2" }}
+          >
+            <Heading fontSize="lg" fontWeight={"thin"}>
+              We're at the core. <br></br>
+              ユーコン。
+            </Heading>
+          </StyledBox>
+        </Box>
       </Box>
-    </Box>
+    </Layout>
   );
 }

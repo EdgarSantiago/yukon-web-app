@@ -25,7 +25,7 @@ export default forwardRef(
       last = top.current;
     });
     return (
-      <mesh style={{ borderRadius: "100px" }} ref={ref} {...props}>
+      <mesh ref={ref} {...props}>
         <planeGeometry args={args} />
         <customMaterial
           ref={material}

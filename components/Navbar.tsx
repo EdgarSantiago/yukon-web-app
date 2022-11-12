@@ -71,6 +71,7 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
+<<<<<<< Updated upstream
             <StyledBox
               className="hvr-underline-from-center"
               onHoverStart={() => play()}
@@ -90,6 +91,11 @@ export default function Navbar() {
                 YUKON
               </Heading>
             </StyledBox>
+=======
+            <Box>
+              <Heading fontFamily={"spaceage"} fontSize={"xx-large"} >YUKON</Heading>
+            </Box>
+>>>>>>> Stashed changes
           </Link>
           <Show above="1000px">
             <Spacer />

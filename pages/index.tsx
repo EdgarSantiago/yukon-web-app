@@ -10,7 +10,6 @@ declare module "*.mp3";
 
 export default function Home() {
   const [play] = useSound("/sound/yukon.mp3");
-  play();
   return (
     <Box
       h="100vh"
@@ -26,7 +25,9 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ type: "Spring", duration: "8" }}
       >
-        <div id="mini">{/** <Minimap /> teste */}</div>
+        <div id="mini">
+          <Minimap />
+        </div>
       </StyledBox>
       <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
         <StyledBox

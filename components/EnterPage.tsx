@@ -4,6 +4,8 @@ import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
 import useSound from "use-sound";
 import { useState } from "react";
 declare module "*.mp3";
+
+
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
   const [play, { stop }] = useSound("/sound/enterbtn.mp3");
   const [Hidden, setHidden] = useState(isVisible);

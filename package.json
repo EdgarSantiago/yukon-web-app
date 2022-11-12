@@ -20,8 +20,10 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "@types/yup": "^0.32.0",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "formik": "^2.2.9",
     "framer-motion": "^6.5.1",
     "framer-motion-3d": "^7.5.3",
     "maath": "^0.4.2",
@@ -38,7 +40,8 @@
     "swiper": "^8.4.3",
     "three": "^0.146.0",
     "typescript": "4.8.4",
-    "use-sound": "^4.0.1"
+    "use-sound": "^4.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/three": "^0.146.0"

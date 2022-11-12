@@ -95,10 +95,25 @@ export default function Navbar() {
             <Spacer />
 
             <HStack spacing="50px">
-              <NavButton title="Home" />
-              <NavButton title="About" />
-              <NavButton title="Services" />
-              <NavButton title="Contact" />
+              <Link href="/">
+                <NavButton title="Home" />
+              </Link>
+
+              <Link href="/about">
+                <NavButton title="About" />
+              </Link>
+
+              <Link href="/auth/signup">
+                <NavButton title="Services" />
+              </Link>
+
+              <Link href="/auth/signup">
+                <NavButton title="Contact" />
+              </Link>
+
+              <Link href="/auth/signin">
+                <NavButton title="Login" />
+              </Link>
             </HStack>
             {/*<ThemeToggleButton />*/}
           </Show>
@@ -138,24 +153,22 @@ declare module "*.mp3";
 function NavButton({ link, title }: NavButton) {
   const [play, { stop }] = useSound("/sound/bleep.mp3");
   return (
-    <Link href={`${link}`}>
-      <StyledBox
-        className="hvr-underline-from-center"
-        onHoverStart={() => play()}
-        onHoverEnd={() => stop()}
-        animate={{
-          textShadow: `0px 0px 0px transparent`,
-        }}
-        whileHover={{
-          textShadow: `0 0 0 #fafafa86, 0 0 2px #fafafa86, 0 0 2px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94`,
-        }}
-        transition={{
-          duration: "0.8",
-          ease: "easeInOut",
-        }}
-      >
-        <Text fontWeight="thin">{title}</Text>
-      </StyledBox>
-    </Link>
+    <StyledBox
+      className="hvr-underline-from-center"
+      onHoverStart={() => play()}
+      onHoverEnd={() => stop()}
+      animate={{
+        textShadow: `0px 0px 0px transparent`,
+      }}
+      whileHover={{
+        textShadow: `0 0 0 #fafafa86, 0 0 2px #fafafa86, 0 0 2px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94, 0 0 5px #fafafa94`,
+      }}
+      transition={{
+        duration: "0.8",
+        ease: "easeInOut",
+      }}
+    >
+      <Text fontWeight="thin">{title}</Text>
+    </StyledBox>
   );
 }

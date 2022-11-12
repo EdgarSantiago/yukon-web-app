@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Navbar from "../Navbar";
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -15,23 +16,18 @@ interface LayoutProps {
 const Layout = ({ children, title }: LayoutProps) => {
   const t = `Yukon Cybernetics ${title}`;
   return (
-    <motion.article
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ duration: 0.4, type: "easeInOut" }}
-      style={{ position: "relative" }}
-    >
-      <>
-        {title && (
-          <Head>
-            <title>{t}</title>
-          </Head>
-        )}
-        {children}
-      </>
-    </motion.article>
+    <>
+      <motion.article style={{ position: "relative" }}>
+        <>
+          {title && (
+            <Head>
+              <title>{t}</title>
+            </Head>
+          )}
+          {children}
+        </>
+      </motion.article>
+    </>
   );
 };
 

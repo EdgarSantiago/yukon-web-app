@@ -21,26 +21,28 @@ export default function Home() {
         position="relative"
         overflowX="hidden"
       >
-        {/*<EnterPage isVisible={false} />*/}
+        <EnterPage isVisible={false} />
         <StyledBox
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ type: "Spring", duration: "8" }}
         >
-          <div id="mini">{/*<Minimap /> */}</div>
+          <div id="mini">{/*<Minimap />*/}</div>
         </StyledBox>
-        <Box alignSelf="center" position="absolute" bottom="10%" px="10%">
-          <StyledBox
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ type: "Spring", duration: "2" }}
-          >
-            <Heading fontSize="lg" fontWeight={"thin"}>
-              We're at the core. <br></br>
-              ユーコン。
-            </Heading>
-          </StyledBox>
-        </Box>
+        <StyledBox
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "Spring", duration: "2" }}
+          alignSelf="center"
+          position="absolute"
+          bottom="10%"
+          px="10%"
+        >
+          <Heading fontSize="lg" fontWeight={"thin"}>
+            We're at the core. <br></br>
+            ユーコン。
+          </Heading>
+        </StyledBox>
       </Box>
     </Layout>
   );

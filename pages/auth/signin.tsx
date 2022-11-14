@@ -8,13 +8,15 @@ import EnterPage from "../../components/EnterPage";
 import useSound from "use-sound";
 import { NextPage } from "next";
 import SignInCard from '../../components/SignInCard'
+import Navbar from "../../components/Navbar";
 declare module "*.mp3";
 
 export default function SignIn() {
   const [play] = useSound("/sound/yukon.mp3");
   return (
-    <StyledBox>
-      <SignInCard />
-    </StyledBox>
-  );
+    <>
+    <Navbar />
+    <SignInCard />
+    </>
+    );
 }

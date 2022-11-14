@@ -1,6 +1,6 @@
 import { StyledBox } from "../../components/theme-toggle-button";
 import useSound from "use-sound";
-  
+
 import { NextPage } from "next";
 declare module "*.mp3";
 
@@ -15,7 +15,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-import { useFormik } from "Formik"; 
+import { useFormik } from 'formik';
 import * as yup from "yup";
 import { object, string, number, date, InferType } from "yup";
 

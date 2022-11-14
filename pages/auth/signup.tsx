@@ -23,7 +23,7 @@ import Navbar from "../../components/Navbar";
 const validationSchema = yup.object({
   name: string().required(),
   email: string().email(),
-  passord: string().required(),
+  password: string().required(),
 });
 
 export default function SignUp() {

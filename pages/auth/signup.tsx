@@ -127,7 +127,7 @@ export default function SignUp() {
               id="password"
               name="password"
               type="password"
-              value={formik.values.rptpassword}
+              value={formik.values.passwordrpt}
               onChange={formik.handleChange}
             />
             <FormHelperText>Type an password {">"} 10char</FormHelperText>

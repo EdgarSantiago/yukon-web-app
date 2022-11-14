@@ -56,7 +56,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
             </StyledBox>
 
             <StyledBox mt="35%">
-              <Heading fontSize="lg" mb="50px" fontWeight={"thin"} fontFamily={"spaceage"}>
+              <Heading fontSize="lg" mb="50px" fontWeight={"bold"} fontFamily={"spaceage"}>
                 This website uses audio to enhance your experience.
               </Heading>
               <Heading fontSize="sm" fontWeight={"thin"}>

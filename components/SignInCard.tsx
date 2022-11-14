@@ -20,9 +20,9 @@ export default function SimpleCard() {
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('black', 'black')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={12}>
         <Stack align={'center'}>
-          <Heading fontSize={'8xl'} fontFamily={'spaceage'}>Y</Heading>
+          <Heading fontSize={'7xl'} fontFamily={'spaceage'}>Y</Heading>
         </Stack>
         <Box
           rounded={'lg'}
@@ -34,7 +34,7 @@ export default function SimpleCard() {
               <FormLabel>Email address</FormLabel>
               <Input type="email"/>
             </FormControl>
-            <FormControl id="password" >
+            <FormControl id="password">
               <FormLabel>Password</FormLabel>
               <Input type="password" />
             </FormControl>
@@ -44,7 +44,7 @@ export default function SimpleCard() {
                 align={'start'}
                 justify={'space-between'}>
                 <Checkbox>Remember me</Checkbox>
-                <Link color={'blue.400'}>Forgot password?</Link>
+                <Link color={'#fafafa'}>Forgot password?</Link>
               </Stack>
               <Button
                 bg={'white'}

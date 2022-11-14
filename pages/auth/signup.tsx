@@ -53,19 +53,20 @@ export default function SignUp() {
     >
       <StyledBox
         bg="#000000"
+        borderRadius={'lg'}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ type: "Spring", duration: "0.5" }}
         m="auto"  
         p={"2%"}
         w="30%"
-        border="2px"
+        border="1px"
         borderColor="#fafafa13"
         shadow="xl"
         whileHover={{ borderColor: "#fafafa" }}
       >
         <form onSubmit={formik.handleSubmit}>
-          <Box mb={2}>
+          <Box mb={2} borderRadius='lg'>
             <Heading fontSize="md" mb={2}>
               Create yout account
             </Heading>
@@ -76,7 +77,7 @@ export default function SignUp() {
           <FormControl>
             <FormLabel>Username</FormLabel>
             <Input
-              borderRadius="md"
+              borderRadius="lg"
               width="100%"
               id="text"
               name="text"

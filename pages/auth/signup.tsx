@@ -85,7 +85,7 @@ export default function SignUp() {
               id="text"
               name="text"
               type="text"
-              value={formik.values.email}
+              value={formik.values.user}
               onChange={formik.handleChange}
             />
             <FormHelperText>We'll never share your email.</FormHelperText>
@@ -127,7 +127,7 @@ export default function SignUp() {
               id="password"
               name="password"
               type="password"
-              value={formik.values.password}
+              value={formik.values.rptpassword}
               onChange={formik.handleChange}
             />
             <FormHelperText>Type an password {">"} 10char</FormHelperText>

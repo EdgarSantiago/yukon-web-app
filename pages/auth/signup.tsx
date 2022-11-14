@@ -65,13 +65,13 @@ export default function SignUp() {
         shadow="xl"
         whileHover={{ borderColor: "#fafafa" }}
       >
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} >
           <Box mb={2} borderRadius='lg'>
             <Heading fontSize="md" mb={2}>
               Create yout account
             </Heading>
             <Heading fontSize="2xl" color="#d8e1e7">
-              Find thousands of softwares.
+              We are Yukon.
             </Heading>
           </Box>
           <FormControl>

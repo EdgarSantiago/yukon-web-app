@@ -18,6 +18,7 @@ import {
 import { useFormik } from 'formik';
 import * as yup from "yup";
 import { object, string, number, date, InferType } from "yup";
+import Navbar from "../../components/Navbar";
 
 const validationSchema = yup.object({
   name: string().required(),
@@ -37,6 +38,8 @@ export default function SignUp() {
     },
   });
   return (
+    <>
+    <Navbar />
     <Box
       h="100vh"
       w="100%"
@@ -135,5 +138,6 @@ export default function SignUp() {
         </form>
       </StyledBox>
     </Box>
+    </>
   );
 }

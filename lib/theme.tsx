@@ -29,6 +29,12 @@ const components = {
       textUnderlineOffset: 3,
     }),
   },
+  Input: {
+    baseStyle: (props: any) => ({
+      color: mode("#752b59", "#8764f1")(props),
+      border: "0px",
+    }),
+  },
 };
 
 const fonts = {

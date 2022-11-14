@@ -51,8 +51,8 @@ export default function SignUp() {
       backgroundImage={`linear-gradient(
         to top,
         #000000d1,
-        #ffffffd6
-      ),url('https://media0.giphy.com/media/qGGW97Hl1alwBpiafM/200w.webp?cid=ecf05e478h91feupderrvxoqbt6avgyg34cahraeyz5agrna&rid=200w.webp&ct=g')});`}
+        #00000095
+      ),url('https://media2.giphy.com/media/VDMgQfvY4s9twR9WUk/giphy.gif?cid=790b761140b1b86a1240a550317981f1af7b0971745311a1&rid=giphy.gif&ct=g')});`}
     >
       <StyledBox
         bg="transparent"

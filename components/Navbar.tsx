@@ -96,7 +96,7 @@ export default function Navbar() {
               </Link>
 
               <Link href="/auth/signin">
-                <NavButton title="Login" />
+                <NavButton title="Access" />
               </Link>
             </HStack>
             {/*<ThemeToggleButton />*/}

@@ -1,6 +1,6 @@
 import { StyledBox } from "../../components/theme-toggle-button";
 import useSound from "use-sound";
-
+  
 import { NextPage } from "next";
 declare module "*.mp3";
 
@@ -15,7 +15,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-import { useFormik } from "formik";
+import { useFormik } from "Formik"; 
 import * as yup from "yup";
 import { object, string, number, date, InferType } from "yup";
 
@@ -32,7 +32,7 @@ export default function SignUp() {
       password: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values: any) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -56,7 +56,7 @@ export default function SignUp() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ type: "Spring", duration: "0.5" }}
-        m="auto"
+        m="auto"  
         p={"2%"}
         w="30%"
         border="2px"

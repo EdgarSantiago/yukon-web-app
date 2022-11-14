@@ -1,6 +1,6 @@
 import { StyledBox } from "../../components/theme-toggle-button";
 import useSound from "use-sound";
-
+import SignupCard from "../../components/SignUpCard";
 import { NextPage } from "next";
 declare module "*.mp3";
 

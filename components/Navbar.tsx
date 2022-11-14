@@ -71,31 +71,9 @@ export default function Navbar() {
           gap="2"
         >
           <Link href="/">
-<<<<<<< Updated upstream
-            <StyledBox
-              className="hvr-underline-from-center"
-              onHoverStart={() => play()}
-              onHoverEnd={() => stop()}
-              animate={{
-                textShadow: `0px 0px 0px transparent`,
-              }}
-              whileHover={{
-                textShadow: `0 0 0 #fafafa86, 0 0 2px #fafafa86, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94, 0 0 2px #fafafa94`,
-              }}
-              transition={{
-                duration: "0.2",
-                ease: "easeInOut",
-              }}
-            >
-              <Heading fontFamily={"spaceage"} fontSize={"xx-large"}>
-                YUKON
-              </Heading>
-            </StyledBox>
-=======
             <Box>
               <Heading fontFamily={"spaceage"} fontSize={"xx-large"} >YUKON</Heading>
             </Box>
->>>>>>> Stashed changes
           </Link>
           <Show above="1000px">
             <Spacer />

@@ -25,7 +25,7 @@ const Main = ({ children }: LayoutProps) => {
   }, []);
   return (
     <Box as="main" position="relative">
-      {/*<Loading isVisible={isLoaded} />*/}
+      <Loading isVisible={isLoaded} />
       <Container py="0px" px="0px" maxW="100%" h="100%">
         {Router.pathname === "/" ? <Navbar /> : null}
         {children}

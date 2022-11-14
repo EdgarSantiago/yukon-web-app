@@ -52,12 +52,12 @@ export default function SignUp() {
       ),url('https://media0.giphy.com/media/qGGW97Hl1alwBpiafM/200w.webp?cid=ecf05e478h91feupderrvxoqbt6avgyg34cahraeyz5agrna&rid=200w.webp&ct=g')});`}
     >
       <StyledBox
-        bg="#000000"
+        bg="transparent"
         borderRadius={'lg'}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ type: "Spring", duration: "0.5" }}
-        m="auto"  
+        m="auto"
         p={"2%"}
         w="30%"
         border="1px"
@@ -66,12 +66,12 @@ export default function SignUp() {
         whileHover={{ borderColor: "#fafafa" }}
       >
         <form onSubmit={formik.handleSubmit} >
-          <Box mb={2} borderRadius='lg'>
+          <Box mb={2} borderRadius='lg' >
             <Heading fontSize="md" mb={2}>
               Create yout account
             </Heading>
-            <Heading fontSize="2xl" color="#d8e1e7">
-              We are Yukon.
+            <Heading alignItems={'center'} fontSize="4xl" color="#d8e1e7" fontFamily={'spaceage'}>
+              Y
             </Heading>
           </Box>
           <FormControl>
@@ -113,7 +113,7 @@ export default function SignUp() {
               value={formik.values.password}
               onChange={formik.handleChange}
             />
-            <FormHelperText>Type an password {">"} 10char</FormHelperText>
+            <FormHelperText>Type an password</FormHelperText>
           </FormControl>
           <FormControl mt={3}>
             <FormLabel>Repeat Password</FormLabel>

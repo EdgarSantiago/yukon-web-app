@@ -169,12 +169,12 @@ function Image({ img, index }) {
 
 function Content() {
   const images = useTexture([
+    "/888.jpg",
+    "/01.jpg",
+    "/666.jpg",
     "/06.jpg",
     "/07.jpg",
-    "/01.jpg",
     "/555.jpg",
-    "/666.jpg",
-    "/888.jpg",
   ]);
   return images.map((img, index) => (
     <Block key={index} factor={1} offset={index}>

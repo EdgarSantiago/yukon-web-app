@@ -3,13 +3,15 @@ import useSound from "use-sound";
 import SignupCard from "../../components/SignUpCard";
 import { NextPage } from "next";
 declare module "*.mp3";
-
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
   FormControl,
   FormLabel,
+  InputGroup,
   FormErrorMessage,
+  InputRightElement,
   Link as Acolor,
   FormHelperText,
   Input,
@@ -29,7 +31,11 @@ const validationSchema = yup.object({
   password: string().required(),
 });
 
-export default function SignUp() {
+import { useState } from "react";
+
+export default function RecoverPass() {
+  const [showPassword, setShowPassword] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -44,7 +50,7 @@ export default function SignUp() {
     <>
       <Navbar />
       <Box
-        h="130vh"
+        h="100vh"
         w="100%"
         display={"flex"}
         position="relative"
@@ -74,7 +80,7 @@ export default function SignUp() {
           <form onSubmit={formik.handleSubmit}>
             <Box mb={2} borderRadius="lg">
               <Heading fontSize="md" mb={2}>
-                Create yout account
+                Recover your password
               </Heading>
               <Heading
                 alignItems={"center"}
@@ -85,63 +91,20 @@ export default function SignUp() {
                 Y
               </Heading>
             </Box>
-            <FormControl>
-              <FormLabel>Username</FormLabel>
-              <Input
-                borderRadius="lg"
-                width="100%"
-                id="text"
-                name="text"
-                type="text"
-              />
-              <FormHelperText>Type your username.</FormHelperText>
-            </FormControl>
-            <FormControl mt={3}>
+            <FormControl mb={2} id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input
-                borderRadius="md"
-                width="100%"
-                id="email"
-                name="email"
-                type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-              />
-              <FormHelperText>We'll never share your email.</FormHelperText>
+              <Input type="email" />
+              <FormHelperText>Type your email.</FormHelperText>
             </FormControl>
 
-            <FormControl mt={3}>
-              <FormLabel>Password</FormLabel>
-              <Input
-                borderRadius="md"
-                mt={0}
-                width="100%"
-                id="password"
-                name="password"
-                type="password"
-              />
-              <FormHelperText>Type an password</FormHelperText>
-            </FormControl>
-            <FormControl mt={3}>
-              <FormLabel>Repeat Password</FormLabel>
-              <Input
-                borderRadius="md"
-                mt={0}
-                width="100%"
-                id="password"
-                name="password"
-                type="password"
-              />
-              <FormHelperText>Type an password {">"} 10char</FormHelperText>
-            </FormControl>
-            <Button mt={3} width="100%" type="submit">
-              Submit
+            <Button mt={1} width="100%" type="submit">
+              Recover password
             </Button>
           </form>
           <Text mt={4}>
-            Already have an account ?{" "}
+            Don't have an account ?{" "}
             <Link href="/auth/signin" passHref legacyBehavior>
-              <Acolor color="#e24848d6">Login Here</Acolor>
+              <Acolor color="#e24848d6">Create Here</Acolor>
             </Link>
           </Text>
         </StyledBox>

@@ -1,9 +1,20 @@
 import { Box, Heading } from "@chakra-ui/react";
+import { StyledBox } from "./theme-toggle-button";
 
-export default function Options({ option1, option2, option3, option4 }) {
+interface Options {
+  option1option1option1option1;
+}
+
+export default function Options({
+  option1,
+  option2,
+  option3,
+  option4,
+  wholeHover,
+}: Options) {
   return (
-    <Box>
+    <StyledBox>
       <Heading>Teste</Heading>
-    </Box>
+    </StyledBox>
   );
 }

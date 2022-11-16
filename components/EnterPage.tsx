@@ -60,8 +60,8 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
                 This website uses audio to enhance your experience.
               </Heading>
               <Heading fontSize="sm" fontWeight={"thin"}>
-                {new Date().getFullYear()} Yukon Cybernetics. All rights
-                reserved.
+                {new Date().getFullYear()}© Yukon Cybernetics. All rights
+                reserved. 
               </Heading>
             </StyledBox>
           </Box>

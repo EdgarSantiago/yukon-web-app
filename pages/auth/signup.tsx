@@ -107,7 +107,7 @@ export default function SignUp() {
                 value={formik.values.email}
                 onChange={formik.handleChange}
               />
-              <FormHelperText>We'll never share your email.</FormHelperText>
+              <FormHelperText>Well never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl mt={3}>

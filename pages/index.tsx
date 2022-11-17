@@ -10,7 +10,6 @@ import { NextPage } from "next";
 declare module "*.mp3";
 
 export default function Home() {
-  const [play] = useSound("/sound/yukon.mp3");
   return (
     <Layout title="| Home">
       <Box
@@ -27,7 +26,9 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ type: "Spring", duration: "8" }}
         >
-          <div id="mini"><Minimap /></div>
+          <div id="mini">
+            <Minimap />
+          </div>
         </StyledBox>
         <StyledBox
           initial={{ opacity: 0 }}
@@ -39,7 +40,7 @@ export default function Home() {
           px="10%"
         >
           <Heading fontSize="lg" fontWeight={"thin"}>
-            We're at the core. <br></br>
+            We&apos;re at the core. <br></br>
             ユーコン。
           </Heading>
         </StyledBox>

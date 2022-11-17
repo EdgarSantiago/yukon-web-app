@@ -124,7 +124,7 @@ export default function SignIn() {
             </Button>
           </form>
           <Text mt={4}>
-            Don't have an account ?{" "}
+            Dont have an account ?{" "}
             <Link href="/auth/signin" passHref legacyBehavior>
               <Acolor color="#e24848d6">Create Here</Acolor>
             </Link>

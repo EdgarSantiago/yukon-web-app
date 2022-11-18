@@ -5,7 +5,6 @@ import useSound from "use-sound";
 import { useState } from "react";
 declare module "*.mp3";
 
-
 export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
   const [play, { stop }] = useSound("/sound/enterbtn.mp3");
   const [Hidden, setHidden] = useState(isVisible);
@@ -29,8 +28,7 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
         >
           <Box m="auto" textAlign={"center"}>
             <StyledBox
-              className="hvr-underline-from-center"
-              mt="50%"
+              mt="35%"
               animate={{
                 textShadow: `0px 0px 0px transparent`,
               }}
@@ -55,13 +53,18 @@ export default function EnterPage({ isVisible }: { isVisible: Boolean }) {
               </Heading>
             </StyledBox>
 
-            <StyledBox mt="35%">
-              <Heading fontSize="lg" mb="50px" fontWeight={"bold"} fontFamily={"spaceage"}>
+            <StyledBox mt="25%">
+              <Heading
+                fontSize="lg"
+                mb="50px"
+                fontWeight={"bold"}
+                fontFamily={"spaceage"}
+              >
                 This website uses audio to enhance your experience.
               </Heading>
               <Heading fontSize="sm" fontWeight={"thin"}>
                 {new Date().getFullYear()}© Yukon Cybernetics. All rights
-                reserved. 
+                reserved.
               </Heading>
             </StyledBox>
           </Box>

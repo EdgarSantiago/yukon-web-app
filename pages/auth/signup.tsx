@@ -17,29 +17,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { object, string, number, date, InferType } from "yup";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
 
-const validationSchema = yup.object({
-  name: string().required(),
-  email: string().email(),
-  password: string().required(),
-});
-
 export default function SignUp() {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: validationSchema,
-    onSubmit: (values: any) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
   return (
     <>
       <Navbar />
@@ -71,7 +52,7 @@ export default function SignUp() {
           shadow="xl"
           whileHover={{ borderColor: "#fafafa" }}
         >
-          <form onSubmit={formik.handleSubmit}>
+          <form>
             <Box mb={2} borderRadius="lg">
               <Heading fontSize="md" mb={2}>
                 Create yout account
@@ -104,8 +85,6 @@ export default function SignUp() {
                 id="email"
                 name="email"
                 type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
               />
               <FormHelperText>Well never share your email.</FormHelperText>
             </FormControl>

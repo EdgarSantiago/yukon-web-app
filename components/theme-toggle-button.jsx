@@ -29,6 +29,6 @@ const ThemeToggleButton = ({ color = "#fafafa" }) => {
 export default ThemeToggleButton;
 
 export const StyledBox = chakra(motion.div, {
-  shouldForwardProp: (prop: any) =>
+  shouldForwardProp: (prop) =>
     isValidMotionProp(prop) || shouldForwardProp(prop),
 });

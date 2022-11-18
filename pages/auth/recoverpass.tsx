@@ -19,33 +19,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { object, string, number, date, InferType } from "yup";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-
-const validationSchema = yup.object({
-  name: string().required(),
-  email: string().email(),
-  password: string().required(),
-});
 
 import { useState } from "react";
 
 export default function RecoverPass() {
   const [showPassword, setShowPassword] = useState(false);
 
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validationSchema: validationSchema,
-    onSubmit: (values: any) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
   return (
     <>
       <Navbar />
@@ -77,7 +58,7 @@ export default function RecoverPass() {
           shadow="xl"
           whileHover={{ borderColor: "#fafafa" }}
         >
-          <form onSubmit={formik.handleSubmit}>
+          <form>
             <Box mb={2} borderRadius="lg">
               <Heading fontSize="md" mb={2}>
                 Recover your password

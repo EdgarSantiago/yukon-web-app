@@ -12,7 +12,7 @@
 }
 
 .pixelBtn {
-    border-radius: 100%;
+  border-radius: 100%;
   position: relative;
   padding: 10px 10px;
   width: 80px;
@@ -26,7 +26,7 @@
   color: var(--color-white);
   transition: var(--speed-normal);
   &:hover {
-    background: var(--color-red) url(/pixel.png); // 360px x 1080px
+    background: var(--color-red) url(/pixel.png);
     transition-delay: 0.4s;
     background-size: 180px;
     animation: animate var(--speed-fast) steps(8) forwards;

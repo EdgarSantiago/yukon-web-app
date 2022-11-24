@@ -7,6 +7,7 @@ import Minimap from "../components/Minimap";
 import EnterPage from "../components/EnterPage";
 import useSound from "use-sound";
 import { NextPage } from "next";
+
 declare module "*.mp3";
 
 export default function Home() {
